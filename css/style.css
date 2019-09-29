@@ -9,7 +9,7 @@ body,html{
     color:#fff;
     background-color: #202843!important;
 }
-h1,h3,a{
+h1,a{
     color:#fff!important;
 }
 
@@ -393,4 +393,13 @@ input{
     border-radius: 27px;
     margin-top: -25px;
     /* height: 100vh; */
+}
+
+.card-tax{
+    background-color: white;
+    padding: 0 17px 0 17px;
+    border-radius: 5px;
+    -webkit-box-shadow: 11px 9px 17px -5px rgba(18,55,122,0.91);
+-moz-box-shadow: 11px 9px 17px -5px rgba(18,55,122,0.91);
+box-shadow: 11px 9px 17px -5px rgba(18,55,122,0.91);
 }
