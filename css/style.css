@@ -7,14 +7,26 @@
 body,html{
     font-family: 'Poppins', sans-serif;
     color:#fff;
-    background-color: #202843!important;
+    background-color: #151a2b!important;
 }
-h1,a{
+a{
     color:#fff!important;
 }
-
 .color-gray{
-    color: rgb(117, 117, 117);
+    color: rgb(61, 61, 61);
+}
+.color-blue{
+    color: #36caf6;
+}
+.mt-50{
+    margin-top: 50px;
+}
+.btn-blue{
+    color: #3daef1;
+    background-color: #ffffff;
+    border-color: #3cb1f1;
+    border-radius: 22px;
+    padding: 3px 14px 5px 14px;
 }
 
 /* menu */
@@ -31,7 +43,9 @@ a, a:hover, a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
-
+.card {
+    border-bottom: 4px solid #36caf6!important;
+}
 .navbar {
     padding: 15px 10px;
     background: #fff;
@@ -147,11 +161,9 @@ a.download {
 }
 
 a.article, a.article:hover {
-    background: #232931  !important;
+    background: #151a2b  !important;
     color: #fff !important;
 }
-
-
 
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -380,26 +392,44 @@ input{
     background-position: center center;
 }
 
-/* card */
+/* card de texto do artigo*/
 .card-horizontal {
     display: flex;
     flex: 1 1 auto;
 }
-.card{
-    border-right: solid #564de1 6px;
-}
+
 .content-article{
     background-color: white;
     border-radius: 27px;
     margin-top: -25px;
     /* height: 100vh; */
 }
-
+/* fica no topo para mostrar a taxa atual da Selic */
 .card-tax{
     background-color: white;
     padding: 0 17px 0 17px;
     border-radius: 5px;
     -webkit-box-shadow: 11px 9px 17px -5px rgba(18,55,122,0.91);
--moz-box-shadow: 11px 9px 17px -5px rgba(18,55,122,0.91);
-box-shadow: 11px 9px 17px -5px rgba(18,55,122,0.91);
+    -moz-box-shadow: 11px 9px 17px -5px rgba(18,55,122,0.91);
+    box-shadow: 11px 9px 17px -5px rgba(18,55,122,0.91);
 }
+
+
+
+.card.card-cascade.narrower .view.view-cascade {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: -1.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
