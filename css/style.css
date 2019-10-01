@@ -395,13 +395,13 @@ input{
 .padding-0{
     padding: 0 !important;
 }
+
 .header {    
     max-width: 100%;
     height: 350px;
     padding: 142px 0 160px 0;
-    /* background-image: url(https://fakeimg.pl/250x100/ff0000/); */
-    background: rgba(52,208,247,1);
-    background: -moz-linear-gradient(left, rgba(52,208,247,1) 0%, rgba(97,32,217,1) 100%);
+     background: rgba(52,208,247,1);
+     background: -moz-linear-gradient(left, rgba(52,208,247,1) 0%, rgba(97,32,217,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(52,208,247,1)), color-stop(100%, rgba(97,32,217,1)));
     background: -webkit-linear-gradient(left, rgba(52,208,247,1) 0%, rgba(97,32,217,1) 100%);
     background: -o-linear-gradient(left, rgba(52,208,247,1) 0%, rgba(97,32,217,1) 100%);
@@ -409,9 +409,15 @@ input{
     background: linear-gradient(to right, rgba(52,208,247,1) 0%, rgba(97,32,217,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34d0f7', endColorstr='#6120d9', GradientType=1 );
     background-size: cover;
-    background-position: center center;
+    background-position: center center; 
 }
-
+.texture-header{
+    background-image: url(../img/banner-home.png);
+}
+.taxas {
+    background-image: url(../img/img-interno.png);
+    background-size: cover;
+}
 /* card de texto do artigo*/
 .card-horizontal {
     display: flex;
@@ -421,7 +427,7 @@ input{
     background-color: white;
     border-radius: 7px;
     margin:-42px 30px 20px 30px;
-    /* height: 100vh; */
+    padding: 20px;
 }
 /* fica no topo para mostrar a taxa atual da Selic */
 .card-tax{
@@ -432,15 +438,21 @@ input{
     -moz-box-shadow: 11px 9px 17px -5px rgba(18,55,122,0.91);
     box-shadow: 11px 9px 17px -5px rgba(18,55,122,0.91);
 }
-
-
-
 .card.card-cascade.narrower .view.view-cascade {
     margin-left: 4%;
     margin-right: 4%;
     margin-top: -1.25rem;
 }
-
+/* ----------------------------------
+mobile
+--------------------------------------- */
+@media (max-width: 600px) 
+{
+    .content-article {
+        margin: -42px 0px 20px 00px;
+        padding: 10px;
+    }
+}
 
 
 
