@@ -443,6 +443,14 @@ input{
     margin-right: 4%;
     margin-top: -1.25rem;
 }
+.underline {
+    content: '';
+    border-top: 2px solid #42ffff;
+    width: 70px;
+    display: block;
+    margin-bottom: 8px;
+    margin: 0 auto;
+}
 /* ----------------------------------
 mobile
 --------------------------------------- */
