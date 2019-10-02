@@ -61,9 +61,19 @@ a{
             transform: translate(-50%, -50%);
     transition: width .2s ease, height .2s ease;
   }
-  .button:hover::before {
+.button:hover::before {
     --size: 400px;
   }
+.icone{
+    position: absolute;
+    right: 179px;
+    top: 199px;
+}
+.icone2{
+    position: absolute;
+    left: 344px;
+    top: 163px;
+}
 /* menu */
 p {
     font-family: 'Poppins', sans-serif;
@@ -229,39 +239,6 @@ a.article, a.article:hover {
     transform: none;
     opacity: 1;
     margin: 5px auto;
-}
-/* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
-@media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-        transform: rotateY(90deg);
-    }
-    #sidebar.active {
-        margin-left: 0;
-        transform: none;
-    }
-    #sidebarCollapse span:first-of-type,
-    #sidebarCollapse span:nth-of-type(2),
-    #sidebarCollapse span:last-of-type {
-        transform: none;
-        opacity: 1;
-        margin: 5px auto;
-    }
-    #sidebarCollapse.active span {
-        margin: 0 auto;
-    }
-    #sidebarCollapse.active span:first-of-type {
-        transform: rotate(45deg) translate(2px, 2px);
-    }
-    #sidebarCollapse.active span:nth-of-type(2) {
-        opacity: 0;
-    }
-    #sidebarCollapse.active span:last-of-type {
-        transform: rotate(-45deg) translate(1px, -1px);
-    }
-
 }
 
 /* ---------------------------------------------------
@@ -451,6 +428,40 @@ input{
     margin-bottom: 8px;
     margin: 0 auto;
 }
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+        transform: rotateY(90deg);
+    }
+    #sidebar.active {
+        margin-left: 0;
+        transform: none;
+    }
+    #sidebarCollapse span:first-of-type,
+    #sidebarCollapse span:nth-of-type(2),
+    #sidebarCollapse span:last-of-type {
+        transform: none;
+        opacity: 1;
+        margin: 5px auto;
+    }
+    #sidebarCollapse.active span {
+        margin: 0 auto;
+    }
+    #sidebarCollapse.active span:first-of-type {
+        transform: rotate(45deg) translate(2px, 2px);
+    }
+    #sidebarCollapse.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    #sidebarCollapse.active span:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
+    }
+
+}
+
 /* ----------------------------------
 mobile
 --------------------------------------- */
@@ -459,6 +470,11 @@ mobile
     .content-article {
         margin: -42px 0px 20px 00px;
         padding: 10px;
+    }
+    .icone{
+        display: none;
+        right: 179px;
+        top: 199px;
     }
 }
 
