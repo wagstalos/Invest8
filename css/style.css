@@ -99,7 +99,7 @@ a, a:hover, a:focus {
     border: none;
     border-radius: 0;
     /* margin-bottom: 40px; */
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
 }
 
 .navbar-btn {
@@ -372,29 +372,39 @@ input{
 .padding-0{
     padding: 0 !important;
 }
-
 .header {    
     max-width: 100%;
     height: 350px;
     padding: 142px 0 160px 0;
-     background: rgba(52,208,247,1);
-     background: -moz-linear-gradient(left, rgba(52,208,247,1) 0%, rgba(97,32,217,1) 100%);
+    background-size: cover;
+    background-position: center center; 
+}
+.bg-degrade{
+    background: rgba(52,208,247,1);
+    background: -moz-linear-gradient(left, rgba(52,208,247,1) 0%, rgba(97,32,217,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(52,208,247,1)), color-stop(100%, rgba(97,32,217,1)));
     background: -webkit-linear-gradient(left, rgba(52,208,247,1) 0%, rgba(97,32,217,1) 100%);
     background: -o-linear-gradient(left, rgba(52,208,247,1) 0%, rgba(97,32,217,1) 100%);
     background: -ms-linear-gradient(left, rgba(52,208,247,1) 0%, rgba(97,32,217,1) 100%);
     background: linear-gradient(to right, rgba(52,208,247,1) 0%, rgba(97,32,217,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34d0f7', endColorstr='#6120d9', GradientType=1 );
-    background-size: cover;
-    background-position: center center; 
+}
+.bg-pan-right {
+	-webkit-animation: bg-pan-right 8s both;
+	        animation: bg-pan-right 8s both;
 }
 .texture-header{
     background-image: url(../img/banner-home.png);
 }
-.taxas {
-    background-image: url(../img/img-interno.png);
+.header-inner {
+    /* background-image: url(../img/img-interno.png); */
+    max-width: 100%;
+    height: 300px;
+    padding: 78px 0 160px 0;
     background-size: cover;
+    background-attachment: fixed;
 }
+
 /* card de texto do artigo*/
 .card-horizontal {
     display: flex;
@@ -471,10 +481,8 @@ mobile
         margin: -42px 0px 20px 00px;
         padding: 10px;
     }
-    .icone{
+    .icone, .icone2{
         display: none;
-        right: 179px;
-        top: 199px;
     }
 }
 

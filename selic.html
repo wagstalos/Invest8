@@ -6,6 +6,7 @@
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -20,27 +21,30 @@
 
 <body>
     <div class="container-fluid padding-0">
-        <div class="header taxas">
+        <!-- Como um link -->
+        <nav class="navbar bg-degrade">
+            <div class="container">
+                <a class="navbar-brand" href="home.html"><i class="fas fa-arrow-left"></i></a>
+            </div>
+        </nav>
+        <div class=" bg-degrade header-inner">
             <div class="d-flex justify-content-center text-light">
-                <h1>Selic</h1>
+                <div class="bounce-in-top">
+                    <h1>Selic</h1>
+                </div>
             </div>
             <div class="d-flex justify-content-center ">
-                <p class="card-tax "> <b>5.5%</b> </p>
+                <p class="card-tax swing-in-top-fwd">Valor atual: <b>5.5%</b> </p>
             </div>
         </div>
     </div>
 
     <div class="container padding-0">
-        <div class="content-article">
-            <div class="container">
+        <div class="content-article shadow-drop-center">
+            <div class="container ">
                 <div class="d-flex justify-content-between bd-highlight mb-3">
-                    <div>
-                        <h2 class="d-flex  justify-content-start color-gray pt-4">O que é a Selic?</h2>
-                    </div>
-                    <div>
-                        <a href="home.html">
-                            <h2 class="d-flex justify-content-end align-right color-gray pt-4">X</h2>
-                        </a>
+                    <div class="text-center">
+                        <h2 class="color-gray pt-4 ">O que é a Selic?</h2>
                     </div>
                 </div>
                 <p class="pt-4">
