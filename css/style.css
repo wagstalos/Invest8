@@ -74,12 +74,12 @@ ul{
 .icone{
     position: absolute;
     right: 179px;
-    top: 199px;
+    top: 103px;
 }
 .icone2{
     position: absolute;
-    left: 344px;
-    top: 163px;
+    left: 217px;
+    top: 84px;
 }
 /* menu */
 p {
@@ -398,6 +398,7 @@ input{
 	        animation: bg-pan-right 8s both;
 }
 .texture-header{
+    position: relative;
     background-image: url(../img/banner-home.png);
 }
 .header-inner {
@@ -488,14 +489,14 @@ input{
     /* Styles */
     .icone2 {
         position: absolute;
-    left: 10px;
-    top: 163px;
-    }
+        left: 97px;
+        top: 62px;
+        }
     .icone {
         position: absolute;
-        right: 33px;
-        top: 199px;
-    }
+        right: 36px;
+        top: 125px;
+        }
     }
 
 /* ----------------------------------
