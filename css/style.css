@@ -381,14 +381,14 @@ a.article, a.article:hover {
     .icone, .icone2{
         display: none;
     }
+    .img-fluid{
+        width: 70%;
+    }
 }
 /* Renda fixa */
 /* Tabs*/
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     border-color: #ffffff #ffffff #fff !important;
-}
-section {
-    /* padding: 60px 0; */
 }
 section .section-title {
     text-align: center;
