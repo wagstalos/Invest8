@@ -19,6 +19,14 @@ ul{
     line-height: 1.7em;
     color: rgb(117, 117, 117);
 }
+blockquote {
+    border-left: 4px solid #3bb1f1;
+    color: #4d4d4d;
+    font-style: italic;
+    line-height: 1.6em;
+    margin: 0;
+    padding-left: 1em;
+}
 .btn-link {
     font-weight: 600;
     color: #151a2b;
