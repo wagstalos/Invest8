@@ -19,6 +19,11 @@ ul{
     line-height: 1.7em;
     color: rgb(117, 117, 117);
 }
+.btn-link {
+    font-weight: 600;
+    color: #151a2b;
+    background-color: transparent;
+}
 .color-gray{
     color: rgb(61, 61, 61);
 }
@@ -433,4 +438,13 @@ section .section-title {
     border-radius: 10px;
 }
 
-
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 0 solid rgba(0,0,0,.125);
+    margin-bottom: 10px;
+}
+.card-accordion {
+    border-left: 4px solid #36caf6;
+}
