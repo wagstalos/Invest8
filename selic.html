@@ -3,15 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="theme-color" content="#39BEF4">
+    <title>Selic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="manifest" href="/manifest.json">
+    
 
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/1ffaa2226d.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149758724-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149758724-1');
+    </script>
+
 </head>
 
 <body>
@@ -19,7 +32,7 @@
         <!-- Como um link -->
         <nav class="navbar bg-degrade">
             <div class="container">
-                <a class="navbar-brand" href="home.html"><i class="fas fa-arrow-left"></i></a>
+                <a class="navbar-brand" href="index.html"><i class="fas fa-arrow-left"></i></a>
             </div>
         </nav>
         <div class=" bg-degrade header-inner">
@@ -29,7 +42,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center ">
-                <p class="card-tax swing-in-top-fwd">Valor atual: <b>5.5%</b> </p>
+                <p class="card-tax swing-in-top-fwd">Valor atual: <b>5.5% a.a </b> </p>
             </div>
         </div>
     </div>
@@ -55,14 +68,14 @@
                     Brasil se balizam. Ela é um instrumento de política monetária utilizado pelo Copom para
                     controlar os juros no país.
                 </p>
-                <p class="pb-4">
-                    A taxa apurada no processamento noturno do Selic, que consolida as taxas praticadas durante
-                    aquele dia, é conhecida como taxa overnight do Selic, taxa Selic overnight ou taxa Selic
-                    over. Embora a taxa seja apurada diariamente, a taxa Selic é usualmente expressa em termos
-                    anuais, compondo os valores apurados nos últimos 12 meses.
-                </p>
+                <blockquote>
+                    <p class="mt-50">
+                        Então se um investimento paga 100% da selic , logo ele paga 5.5 % ao ano que é o valor atual da
+                        taxa.
+                    </p>
+                </blockquote>
             </div>
-            <div class="row">
+            <div class="row mt-50">
                 <div class="offset-md-3 col-md-6 col-sm-12">
                     <a href="cdi.html">
                         <button class="button">
@@ -87,14 +100,7 @@
         integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-                $(this).toggleClass('active');
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 

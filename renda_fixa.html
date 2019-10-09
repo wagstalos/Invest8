@@ -3,15 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="theme-color" content="#39BEF4">
+    <title>Renda Fixa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- CODELAB: Add link rel manifest -->
+    <link rel="manifest" href="/manifest.json">
 
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/1ffaa2226d.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149758724-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149758724-1');
+    </script>
+
 </head>
 
 <body>
@@ -19,7 +32,7 @@
         <!-- Como um link -->
         <nav class="navbar bg-degrade">
             <div class="container">
-                <a class="navbar-brand" href="home.html"><i class="fas fa-arrow-left"></i></a>
+                <a class="navbar-brand" href="index.html"><i class="fas fa-arrow-left"></i></a>
             </div>
         </nav>
         <div class=" bg-degrade header-inner">
@@ -58,7 +71,7 @@
                                             aria-selected="false">Quais os tipos </a>
                                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
                                             href="#nav-contact" role="tab" aria-controls="nav-contact"
-                                            aria-selected="false">Como comprar?</a>
+                                            aria-selected="false">Como investir?</a>
                                         <!-- <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab"
                                             href="#nav-about" role="tab" aria-controls="nav-about"
                                             aria-selected="false">About</a> -->
@@ -88,7 +101,7 @@
                                         aria-labelledby="nav-profile-tab">
                                         <h2 class="color-gray m-4 text-center">Quais os Tipos?</h2>
                                         <div class="row align-items-center justify-content-center">
-                                            <div class="col-md-3 col-sm-12">
+                                            <div class="col-md-3 col-sm-12 text-center">
                                                 <img src="img/example-19.svg" alt="mulher segurando um cofrinho"
                                                     class="img-fluid text-center">
 
@@ -223,7 +236,7 @@
                                             você ira escolher o título e quantidade que deseja,
                                             usei dois exemplos nas imagens um de um tesouro 2025 no caso do tesouro
                                             comprei uma fração e outro de cuma compra
-                                            de um LCI
+                                            de um LCI.
                                         </p>
 
                                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -308,21 +321,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
             integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
             crossorigin="anonymous"></script>
-
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar').toggleClass('active');
-                    $(this).toggleClass('active');
-                });
-                $(".nav-tabs a").click(function () {
-                    $(this).tab('show');
-                });
-                $('.carousel').carousel({
-                    interval: 5000
-                })
-            });
-        </script>
+        <script src="js/main.js"></script>
 
 </body>
 
