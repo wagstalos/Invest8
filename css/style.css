@@ -456,3 +456,6 @@ section .section-title {
 .card-accordion {
     border-left: 4px solid #36caf6;
 }
+.page-footer{
+    background-color: #090b13;
+}
