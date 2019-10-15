@@ -4,3 +4,8 @@ pois a ideia do projeto é que investir é para sempre.
 
 ideia principal 
 Projeto para ensinar o básico de investimentos para quem quer aprender sobre.
+
+# Tecnologias
+>HTML
+>CSS
+>Javascript
