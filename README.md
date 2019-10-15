@@ -6,6 +6,6 @@ ideia principal
 Projeto para ensinar o básico de investimentos para quem quer aprender sobre.
 
 # Tecnologias
->HTML
->CSS
->Javascript
+> HTML
+> CSS
+> Javascript
