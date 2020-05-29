@@ -1,3 +1,21 @@
+<?php
+
+include 'hg_finance.php';
+
+// Primeiro parametro do construtor recebe a chave da API
+$HGFinance = new HGFinance('ed052c10');
+
+$HGFinance->get();
+
+$finance  = $HGFinance->get();
+?>
+
+<?php
+
+// Retorno dos resultados da API
+// pr($HGFinance->data);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -32,7 +50,7 @@
         <!-- Como um link -->
         <nav class="navbar bg-degrade">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><i class="fas fa-arrow-left"></i></a>
+                <a class="navbar-brand" href="index.php"><i class="fas fa-arrow-left"></i></a>
             </div>
         </nav>
         <div class=" bg-degrade header-inner">
@@ -42,7 +60,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center ">
-                <p class="card-tax swing-in-top-fwd">Valor atual: <b>4.9% a.a</b> </p>
+                <p class="card-tax swing-in-top-fwd">Valor atual: <b><?php  echo $finance['taxes']['0']['cdi_daily']; ?> a.a</b> </p>
             </div>
         </div>
     </div>
@@ -72,7 +90,7 @@
                     brasileira. </p>
                 <div class="row mt-50">
                     <div class="col">
-                        <a href="selic.html">
+                        <a href="selic.php">
                             <button class="button">
                                 <span><i class="fas fa-arrow-left"></i> <b class="ml-2"> </b></span>
                             </button>

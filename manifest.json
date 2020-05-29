@@ -1,5 +1,5 @@
 {
-    "name": "Investimento8",
+    "name": "Invest8",
     "short_name": "I8",
     "icons": [{
       "src": "img/coin.png",
@@ -26,7 +26,7 @@
         "sizes": "512x512",
         "type": "image/png"
       }],
-    "start_url": "https://wpsgames.com.br/sites/investimentos8/index.html",
+    "start_url": "http://invest8.com.br/",
     "display": "standalone",
     "background_color": "#272DB3",
     "theme_color": "#2F3BA2"

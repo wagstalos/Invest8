@@ -1,9 +1,46 @@
+<?php
+
+include 'hg_finance.php';
+
+// Primeiro parametro do construtor recebe a chave da API
+$HGFinance = new HGFinance('ed052c10');
+
+// Voce pode configurar via metodos
+//$HGFinance->set_key('SUA-CHAVE');
+// $HGFinance->set_locale('en');
+// $HGFinance->set_use_ssl(true);
+
+// Metodo para obter os todos dados
+
+$HGFinance->get();
+// Voce pode acessar qualquer endpoint da API
+// $HGFinance->get('currencies');
+// $HGFinance->get('taxes');
+// $HGFinance->get('historical', array('start_date' => '2018-12-20', 'end_date' => '2018-12-24'));
+
+// Verificando a autenticacao da chave
+// if($HGFinance->valid_key()){
+//   echo 'CHAVE VALIDA';
+// } else {
+//   echo 'CHAVE INVALIDA';
+// }
+
+$finance  = $HGFinance->get();
+?>
+
+<?php
+
+// Retorno dos resultados da API
+// pr($HGFinance->data);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <title>Investiment8</title>
+    <title>Invest8</title>
     <meta name="theme-color" content="#151a2b">
     <meta name="wps games" content="investimento8">
     <meta name="description" content="Game developer, wps games">
@@ -38,7 +75,7 @@
 
     <div class="wrapper">
         <!-- Sidebar Holder -->
-        <nav id="sidebar">
+        <nav id="sidebar" class="active">
             <div class="sidebar-header">
                 <!-- <h3>Menu</h3> -->
                 <img class="card-img-top" src="img/invest8.png" alt="logotipo invest8">
@@ -50,13 +87,13 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
                         class="dropdown-toggle">Taxas</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <a href="selic.html">
+                        <a href="selic.php">
                             <li>
                                 O que é a Selic?
                             </li>
                         </a>
                         <li>
-                            <a href="cdi.html">O que é a CDI?</a>
+                            <a href="cdi.php">O que é a CDI?</a>
                         </li>
                         <li>
                             <a href="ipca.html">O que é IPCA</a>
@@ -100,34 +137,20 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <button type="button" id="sidebarCollapse" class="navbar-btn active">
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
-                    <!-- <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button> -->
-
-                    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto ">
-                            <li class="nav-item active">
-                                <a class="nav-link text-light" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-light" href="#">Page</a>
-                            </li>
-                        </ul>
-                    </div> -->
-
+                    <ul class="navbar-nav mx-auto text-md-center">
+                        <li class="ml-4"><h6> <b>Selic: </b> <?php  echo $finance['taxes']['0']['selic']; ?>%</h6></li>
+                        <li class="ml-4"><h6> <b>CDI: </b>  <?php  echo $finance['taxes']['0']['cdi_daily']; ?>%</h6></li>
+                        <li class="ml-4"><h6> <b>Ibov: </b> <?php  echo $finance['stocks']['IBOVESPA']['points']; ?>
+                        <span  style="color: <?php echo $value['variation'] >=0 ?'#1abc9c' : '#e74c3c' ?>"> <?php  echo $finance['stocks']['IBOVESPA']['variation'];?>%</span>
+                        </h6> </li>
+                        
+                    </ul>
+            
                     <a href="https://www.linkedin.com/in/wagner-silva-6a163555/"><i
                             class="fab fa-linkedin-in text-light"></i></a>
                 </div>
@@ -138,6 +161,7 @@
                     <h6 class="text-center">Bem-vindo ao guia básico de: </h6>
                     <div class="d-flex justify-content-center">
                         <h1 class="text-center">Investimentos</h1>
+                        
                         <div class="icone">
                             <img class="card-img-top" src="img/icone_site.svg" alt="Card image cap">
                         </div>
@@ -194,7 +218,7 @@
                                     <p class="card-text">Para comerçarmos aprender sobre investimentos precisamos
                                         entender a taxa Selic.</p>
                                     <!-- Button -->
-                                    <a href="selic.html">
+                                    <a href="selic.php">
                                         <button class="button">
                                             <span>ACESSAR</span>
                                         </button>
@@ -224,7 +248,7 @@
                                     <p class="card-text"> Você sabe como funciona? por que foi criado? e como
                                         ele afeta seus investimentos?</p>
                                     <!-- Button -->
-                                    <a href="cdi.html">
+                                    <a href="cdi.php">
                                         <button class="button">
                                             <span>ACESSAR</span>
                                         </button>

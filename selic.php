@@ -1,3 +1,20 @@
+<?php
+
+include 'hg_finance.php';
+// Primeiro parametro do construtor recebe a chave da API
+$HGFinance = new HGFinance('ed052c10');
+
+$HGFinance->get();
+
+$finance  = $HGFinance->get();
+?>
+
+<?php
+
+// Retorno dos resultados da API
+// pr($HGFinance->data);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -32,7 +49,7 @@
         <!-- Como um link -->
         <nav class="navbar bg-degrade">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><i class="fas fa-arrow-left"></i></a>
+                <a class="navbar-brand" href="index.php"><i class="fas fa-arrow-left"></i></a>
             </div>
         </nav>
         <div class=" bg-degrade header-inner">
@@ -42,7 +59,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center ">
-                <p class="card-tax swing-in-top-fwd">Valor atual: <b>5% a.a </b> </p>
+                <p class="card-tax swing-in-top-fwd">Valor atual: <b><?php  echo $finance['taxes']['0']['selic']; ?> a.a </b> </p>
             </div>
         </div>
     </div>
@@ -82,7 +99,7 @@
                 </p>
                 <blockquote>
                     <p class="mt-50">
-                        Então se um investimento paga 100% da selic , logo ele paga 5.5 % ao ano que é o valor atual da
+                        Então se um investimento paga 100% da selic , logo ele paga <b><?php  echo $finance['taxes']['0']['selic']; ?></b> % ao ano que é o valor atual da
                         taxa.
                     </p>
                 </blockquote>
@@ -93,7 +110,7 @@
             </div>
             <div class="row mt-50">
                 <div class="offset-md-3 col-md-6 col-sm-12">
-                    <a href="cdi.html">
+                    <a href="cdi.php">
                         <button class="button">
                             <span> <b class="mr-2"></b><i class="fas fa-arrow-right"></i></span>
                         </button>
