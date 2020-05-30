@@ -54,7 +54,7 @@ $finance  = $HGFinance->get();
     <link rel="apple-touch-icon" href="/img/coin.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?version=4">
     <link rel="manifest" href="manifest.json">
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- Font Awesome JS -->
@@ -146,7 +146,7 @@ $finance  = $HGFinance->get();
                         <li class="ml-4"><h6> <b>Selic: </b> <?php  echo $finance['taxes']['0']['selic']; ?>%</h6></li>
                         <li class="ml-4"><h6> <b>CDI: </b>  <?php  echo $finance['taxes']['0']['cdi_daily']; ?>%</h6></li>
                         <li class="ml-4"><h6> <b>Ibov: </b> <?php  echo $finance['stocks']['IBOVESPA']['points']; ?>
-                        <span  style="color: <?php echo $value['variation'] >=0 ?'#1abc9c' : '#e74c3c' ?>"> <?php  echo $finance['stocks']['IBOVESPA']['variation'];?>%</span>
+                        <span  style="background-color: <?php echo $value['variation'] >=0 ?'#1abc9c' : '#e74c3c' ?>"> <?php  echo $finance['stocks']['IBOVESPA']['variation'];?>%</span>
                         </h6> </li>
                         
                     </ul>

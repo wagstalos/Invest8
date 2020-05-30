@@ -98,6 +98,11 @@ blockquote {
 #content ul li b{
     color: #36caf6;
 }
+#content ul li span{
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 1px 6px;
+}
 .text-dark{
     color:rgb(117, 117, 117);
 }
@@ -271,10 +276,10 @@ a.article, a.article:hover {
 }
 .header {    
     max-width: 100%;
-    height: 350px;
-    padding: 142px 0 160px 0;
+    height: 261px;
+    padding: 86px 0 93px 0;
     background-size: cover;
-    background-position: center center; 
+    background-position: center center;
 }
 .bg-degrade{
     background: rgba(52,208,247,1);
@@ -291,7 +296,7 @@ a.article, a.article:hover {
 	        animation: bg-pan-right 8s both;
 }
 .texture-header{
-    position: relative;
+    /* position: relative; */
     background-image: url(../img/banner-home.png);
 }
 .header-inner {
@@ -376,6 +381,13 @@ a.article, a.article:hover {
     }
     .img-fluid{
         width: 70%;
+    }
+    .header {
+        max-width: 100%;
+        height: 181px;
+        padding: 48px 0 94px 0;
+        background-size: cover;
+        background-position: center center;
     }
 }
 /* Renda fixa */
