@@ -13,7 +13,7 @@ tem interesse em aprender a investir porém falta um guia um caminho para seguir
 * CSS
 * Bootstrap 4
 * Javascript
-*PHP
+* PHP
 
 ##API
 https://hgbrasil.com/status/finance
