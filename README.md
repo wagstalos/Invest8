@@ -1,6 +1,7 @@
 # Projeto Invest8
 
 http://invest8.com.br/
+![alt text](https://mir-s3-cdn-cf.behance.net/project_modules/fs/262c6287199431.5db08e85da134.png)
 
 O nome do projeto é Invest8, 8 por representar o infinito , 
 pois a ideia do projeto é que investir é para sempre, ao começar estudar sobre investimentos percebi que as pessoas
