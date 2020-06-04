@@ -4,6 +4,7 @@ include 'hg_finance.php';
 
 // Primeiro parametro do construtor recebe a chave da API
 $HGFinance = new HGFinance('ed052c10');
+// $dolar = $HGFinance->dolar_quotation();
 
 // Voce pode configurar via metodos
 //$HGFinance->set_key('SUA-CHAVE');
@@ -24,6 +25,8 @@ $HGFinance->get();
 // } else {
 //   echo 'CHAVE INVALIDA';
 // }
+
+
 
 $finance  = $HGFinance->get();
 ?>
@@ -54,7 +57,7 @@ $finance  = $HGFinance->get();
     <link rel="apple-touch-icon" href="/img/coin.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css?version=7">
+    <link rel="stylesheet" href="css/style.css?version=21">
     <link rel="manifest" href="manifest.json">
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- Font Awesome JS -->
@@ -146,11 +149,18 @@ $finance  = $HGFinance->get();
                         <li class="ml-4"><h6> <b>Selic: </b> <?php  echo $finance['taxes']['0']['selic']; ?>%</h6></li>
                         <li class="ml-4"><h6> <b>CDI: </b>  <?php  echo $finance['taxes']['0']['cdi_daily']; ?>%</h6></li>
                         <li class="ml-4"><h6> <b>Ibov: </b> <?php  echo $finance['stocks']['IBOVESPA']['points']; ?>
-                        <span  style="background-color: <?php echo $value['variation'] >0 ?'#1abc9c' : '#e74c3c' ?>"> <?php  echo $finance['stocks']['IBOVESPA']['variation'];?>%</span>
+                        <span class="badge badge-<?php echo $value['variation'] < 0 ? 'danger' : 'success' ?>" > <?php  echo $finance['stocks']['IBOVESPA']['variation'];?>%</span>
                         </h6> </li>
+
+
+                        <li class="ml-4"><h6> <b>Dolár: </b> <?php echo $finance['currencies']['USD']['buy']; ?>
                         
+                        <span style="color: <?php echo $value['variation'] < 0 ? 'red' : '#60e860' ?>" > 
+                        <?php  echo $finance['currencies']['USD']['variation'];?>%</span>
+                        </h6> </li>
+    
                     </ul>
-            
+
                     <a href="https://www.linkedin.com/in/wagner-silva-6a163555/"><i
                             class="fab fa-linkedin-in text-light"></i></a>
                 </div>
